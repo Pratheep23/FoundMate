@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F5F5;
+  
+    /* Because we want header to be sticky later */
+    height: 9.6rem;
+    padding: 0 4.8rem;
+    position: relative;
+  }
+  
+  .logo {
+    height: 5.5rem;
+    width: 15rem;
+  } 
+
+  /**************************/
+/* NAVIGATION */
+/**************************/
+
+
+
+.main-nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight:bold;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+  }
+
+  .main-nav-link:hover,
+.main-nav-link:active {
+  color: #efd2a0;
+}

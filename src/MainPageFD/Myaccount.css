@@ -1,0 +1,43 @@
+.Myaccount{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+    align-items: center;
+    padding:5rem 0;
+
+
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo{
+    width: 18rem;
+    height: 18rem;
+    margin-bottom: 3rem;
+}
+.profile p a{
+    margin:0 1rem;
+}
+
+.profile-desc h1{
+    margin : 1.5rem auto ;
+}
+
+.profile-desc h1:last-child{
+    padding-bottom: 3rem;
+    border-bottom:0.2rem solid #ccc;
+}
+
+.Settings{
+margin: 0 10rem;
+}
+.Settings ul{
+    list-style: none;
+}
+.Settings li{
+    margin:1.5rem 5rem;  
+}

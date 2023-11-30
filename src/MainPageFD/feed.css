@@ -1,0 +1,58 @@
+
+
+.back-color{
+    background-color:lightgoldenrodyellow;
+    margin:2.4rem 0;
+    padding:1.5rem 0;
+}
+
+.Feed{
+    
+    margin: 2rem auto;
+    height: auto;
+    background-color:#fcfafa;
+    width: 70%;
+    border-radius: 1%;
+    padding:5%;
+
+}
+
+
+
+.Post-post{
+    margin-bottom: 3rem;
+    
+}
+
+.Post-details{
+    min-height:5rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:cadetblue;
+}
+
+.Post-image{
+    height: 30rem;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Post-image img{
+    width: 20rem;
+    height: 25rem;
+    margin: 1rem 0;
+}
+
+.Post-desc{
+    padding: 3rem 3rem;
+    height: 10rem;
+    background-color: red;
+}
+
+.Post-desc p{
+font-size: 1.5rem; 
+}

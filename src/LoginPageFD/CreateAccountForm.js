@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 import { addDoc, collection } from 'firebase/firestore';
 import { auth } from '../firebase-config';
 import { db } from '../firebase-config';
@@ -17,6 +17,7 @@ const CreateAccountForm = ({ onButtonClick }) => {
     // Add your create account logic here
     try{
       const user = await createUserWithEmailAndPassword(auth, email, password);
+      await signOut(auth);
     } catch (error){
       console.log(error.message);
     }
