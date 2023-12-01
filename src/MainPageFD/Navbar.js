@@ -10,16 +10,19 @@ function Navbar(){
         await signOut(auth);
         navigate('/');
     }
+    const handleLost = () => {
+        navigate('/main/lost');
+    }
     return(
 
         <header className="header">
             <a href="#">
-                <img className="logo" alt="logo-img" src="images/foundmate-logo.jpg"/>
+                <img className="logo" alt="logo-img" src="/images/foundmate-logo.jpg"/>
             </a>
 
             <nav className="main-nav">
             <ul className="main-nav-list">
-                <li><a className="main-nav-link" href="#">LOST</a></li>
+                <li><a className="main-nav-link" href="/main/lost">LOST</a></li>
                 
                 <li><Link className="main-nav-link"  to="">FOUND</Link></li>
                 <li><Link className="main-nav-link"  to="/main/account">MY ACCOUNT</Link></li>
