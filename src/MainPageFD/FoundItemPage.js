@@ -6,7 +6,7 @@ import { collection, addDoc } from 'firebase/firestore';
 import './LostItemPage.css'; // Import your CSS file
 
 const LostItemForm = () => {
-  const [type, setType] = useState('Lost');
+  const [type, setType] = useState('Found');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [lostLocation, setLostLocation] = useState('');
@@ -67,12 +67,8 @@ const LostItemForm = () => {
             <textarea value={description} onChange={(e) => setDescription(e.target.value)} required />
           </label>
           <label>
-            Lost Location:
+            Found Location:
             <input type="text" value={lostLocation} onChange={(e) => setLostLocation(e.target.value)} required />
-          </label>
-          <label>
-            Reward if Found:
-            <input type="text" value={reward} onChange={(e) => setReward(e.target.value)} required />
           </label>
           <label>
             Upload Image:

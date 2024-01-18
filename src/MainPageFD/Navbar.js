@@ -22,9 +22,9 @@ function Navbar(){
 
             <nav className="main-nav">
             <ul className="main-nav-list">
-                <li><a className="main-nav-link" href="/main/lost">LOST</a></li>
+                <li><Link className="main-nav-link" to="/main/lost">LOST</Link></li>
                 
-                <li><Link className="main-nav-link"  to="">FOUND</Link></li>
+                <li><Link className="main-nav-link"  to="/main/found">FOUND</Link></li>
                 <li><Link className="main-nav-link"  to="/main/account">MY ACCOUNT</Link></li>
                 <li><button className="main-nav-link"  onClick={handleLogout}> LOGOUT </button></li>
                 {/* <li><a class="main-nav-link nav-cta"  href="#"></a></li> */}
