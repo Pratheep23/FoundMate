@@ -1,43 +1,48 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #F5F5F5;
-  
-    /* Because we want header to be sticky later */
-    height: 9.6rem;
-    padding: 0 4.8rem;
-    position: relative;
-  }
-  
-  .logo {
-    height: 5.5rem;
-    width: 15rem;
-  } 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F5F5F5;
 
-  /**************************/
+  /* Because we want header to be sticky later */
+  height: 6rem;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.logo {
+  height: 3rem;
+  width: 12rem;
+} 
+
+/**************************/
 /* NAVIGATION */
 /**************************/
 
-
-
 .main-nav-list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 4.8rem;
-  }
-
-  .main-nav-link:link {
-    display: inline-block;
-    text-decoration: none;
-    color: #333;
-    font-weight:bold;
-    font-size: 1.8rem;
-    transition: all 0.3s;
-  }
-
-  .main-nav-link:hover,
-.main-nav-link:active {
-  color: #efd2a0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.main-nav-link{
+  color: black;
+  text-decoration: none;
+  font-weight:bold;
+  font-size: 1.4rem;
+}
+.main-nav-link:hover{
+  color: blue;
+}
+
+.main-nav-list button{
+  background-color: tomato;
+}
+.main-nav-list button:hover{
+  background-color:blue;
+  color: black;
+}
+
+
