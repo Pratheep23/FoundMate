@@ -53,7 +53,7 @@ function Feed() {
                 key={objarr.id}
               >
                 <div className="Post-details">
-                  <h2>{objarr.name}</h2>
+                <h2 style={{ textTransform: 'uppercase' }}>{objarr.name}</h2>
                 </div>
                 <div className="Post-image">
                   <img src={objarr.imageUrl} alt={objarr.name} />

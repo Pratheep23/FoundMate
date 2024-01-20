@@ -45,11 +45,16 @@ const Myaccount = () => {
   return (
     <>
       <Navbar />
-      <section>
+      <section >
         <div className="container">
           <div className="Myaccount">
             <div className="profile">
+              <div className="circularDiv">
+
               <img src='/images/myaccount/profile-pic.png' alt="profile-img" className="profile-photo" />
+
+              </div>
+            
               <h2>{userDetails?.name}</h2>
               <br />
               <p>
@@ -66,13 +71,7 @@ const Myaccount = () => {
               <h1>Address : {userDetails?.address}</h1>
             </div>
           </div>
-          <div className='Settings'>
-            <h1>Notfications Preference </h1>
-            <ul>
-              <li><p>Email : <input type="checkbox" id="notification-email" name="notification-email" value="Email"></input></p></li>
-              <li><p>Call :  <input type="checkbox" id="notification-call" name="notification-call" value="call"></input></p> </li>
-            </ul>
-          </div>
+          
         </div>
       </section>
     </>
