@@ -1,64 +1,60 @@
 
 
 .back-color{
-    background-color:lightgoldenrodyellow;
+    /* background-color:ghostwhite; */
+    
+    background: url('https://img.freepik.com/free-vector/watercolor-blue-dot-background_23-2149535454.jpg') repeat;
     margin:2.4rem 0;
     padding:1.5rem 0;
 }
 
 .Feed{
-    
     margin: 2rem auto;
     height: auto;
-    background-color:#fcfafa;
+    background-color: rgba(219, 237, 249, 0.9);
     width: 50%;
     border-radius: 1%;
-    padding:5%;
-
+    padding:5% 0%;
 }
 
-
-
-.Post-post{
-    margin: 1rem auto;
-    width: 90%;
-    border-radius: 10px;
-}
-
-.found-post .Post-details {
-    background-color: green;
+.Post-post {
+    margin: 3rem auto;
+    width: 60%;
+    border-radius: 10px; /* Updated from 10% to 10px for a more consistent look */
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-5px); /* Lift the post slightly on hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a slightly larger box shadow on hover */
+    }
   }
-
+  
+  .found-post .Post-details,
   .found-post .Post-desc {
-    background-color: green;
+    background-color: #4caf50; /* Green color for 'Found' posts */
+    color: #fff; /* White text color for better readability */
   }
-
-.Post-details{
+  
+  .Post-desc,
+  .Post-details {
+    padding: 1rem;
+    background-color: #e74c3c; /* Tomato color */
+  }
+  
+  .Post-image {
     height: auto;
-    padding:1rem 1rem;
-    background-color:tomato;
-}
-
-.Post-image{
-    height: 30rem;
-    background-color: lightgray;
+    background-color: #f2f2f2; /* Light gray background for the image container */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.Post-image img{
-    width: 20rem;
-    height: 25rem;
-    margin: 1rem 0;
-}
+  }
+  .Post-image img{
+    width: 100%;
+    margin: 0.5rem 0;
+  }
 
-.Post-desc{
-    padding: 1rem 1rem;
-    height: auto;
-    background-color: tomato;
-}
 
-.Post-desc p{
-font-size: 1.5rem; 
-}
+
