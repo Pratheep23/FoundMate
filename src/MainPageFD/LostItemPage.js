@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { getDocs, query, where } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
-import { storage, db } from '../firebase-config'; // Adjust the path accordingly
+import { auth, storage, db } from '../firebase-config'; // Adjust the path accordingly
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc } from 'firebase/firestore';
 import './LostItemPage.css'; // Import your CSS file
 
 const LostItemForm = () => {
+  const [userDetails, setUserDetails] = useState(null);
+  const [email,setEmail] = useState('');
+  const [mobile,setMobile] = useState('');
   const [type, setType] = useState('Lost');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -13,6 +17,33 @@ const LostItemForm = () => {
   const [reward, setReward] = useState('');
   const [image, setImage] = useState(null);
   const navigate = useNavigate();
+  useEffect(() => {
+    const fetchUserDetails = async () => {
+      const currentUser = auth.currentUser;
+
+      if (currentUser) {
+
+        try {
+          const userSnapshot = await getDocs(query(collection(db, "usersData"), where("email", "==", currentUser.email)));
+
+          if (!userSnapshot.empty) {
+            const userData = userSnapshot.docs[0].data();
+            setEmail(userData.email);
+            setMobile(userData.mobile);
+          } else {
+            console.error('User not found in Firestore');
+          }
+        } catch (error) {
+          console.error('Error fetching user details:', error.message);
+        }
+      } else {
+        console.log('no current user');
+      }
+    };
+
+    // Fetch user details when the component mounts
+    fetchUserDetails();
+  }, []);
   const handleGoBack = (e) => {
     navigate('/main')
   }
@@ -23,6 +54,7 @@ const LostItemForm = () => {
   };
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
 
     // Upload image to Firebase Storage
@@ -38,7 +70,10 @@ const LostItemForm = () => {
         description,
         lostLocation,
         reward,
+        email,
+        mobile,
         imageUrl,
+        
       });
 
       console.log('Document written with ID:', docRef.id);

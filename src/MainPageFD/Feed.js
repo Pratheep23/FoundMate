@@ -23,9 +23,6 @@ function Feed() {
     }, []); 
   
     // checking if data is received
-    useEffect(() => {
-        console.log(data);
-      }, [data]);
 
     return (
       <div>

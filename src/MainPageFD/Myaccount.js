@@ -12,14 +12,11 @@ const Myaccount = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       const currentUser = auth.currentUser;
-      console.log("bro vendaam bro");
 
       if (currentUser) {
-        console.log("current user is there");
 
         try {
           const userSnapshot = await getDocs(query(collection(db, "usersData"), where("email", "==", currentUser.email)));
-          console.log("snapshot created");
 
           if (!userSnapshot.empty) {
             const userData = userSnapshot.docs[0].data();
