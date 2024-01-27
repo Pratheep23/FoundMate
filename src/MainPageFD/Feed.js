@@ -58,6 +58,7 @@ function Feed() {
                 </div>
                 <div className="Post-desc">
                   <p>{objarr.description}</p>
+                  <p>Contact Details : {objarr.mobile} | {objarr.email} </p>
                 </div>
               </div>
             ))}
