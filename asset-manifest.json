@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FoundMate/static/css/main.198145b5.css",
+    "main.js": "/FoundMate/static/js/main.66b7a2fe.js",
+    "static/js/787.c3601210.chunk.js": "/FoundMate/static/js/787.c3601210.chunk.js",
+    "index.html": "/FoundMate/index.html",
+    "main.198145b5.css.map": "/FoundMate/static/css/main.198145b5.css.map",
+    "main.66b7a2fe.js.map": "/FoundMate/static/js/main.66b7a2fe.js.map",
+    "787.c3601210.chunk.js.map": "/FoundMate/static/js/787.c3601210.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.198145b5.css",
+    "static/js/main.66b7a2fe.js"
+  ]
+}
