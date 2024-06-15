@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+}
+
+.maxw{
+    max-width: 120rem;
+    margin : 0 auto;
+}
+
+
+/* =======================================================*/
+
+.index-main-container{
+    background-color: rgb(247, 246, 246);
+    padding: 3rem 0rem;
+}
+
+.maxw-main{
+    display: flex;
+    justify-content: center;
+    gap:15rem;
+}
+
+.foundmate-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.foundmate-content h1{
+    font-size: 3.6rem;
+}
+
+
+.foundmate-content{
+    font-size: 2.4rem;
+}
+
+/* =======================================================*/
+
+.index-boxes-container{
+    background-color: lightgoldenrodyellow;
+}
+
+.maxw-boxes{
+    padding:5rem 0rem ;
+    display: flex;
+    justify-content: space-between;
+    gap:10rem;
+}
+
+.maxw-boxes div {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 2rem;
+    width: 35rem;
+}
+
+.maxw-boxes div:nth-child(2) {
+    background-color: #e9e9e9;
+}
+
+.maxw-boxes div h3 {
+    margin-bottom: 1rem;
+}
+
+.maxw-boxes div p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media (max-width:35em){
+    .maxw-main{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap:5rem;
+    }
+    
+    .foundmate-content{
+        text-align: center;
+    }
+
+    .foundmate-pic{
+        text-align: center;
+    }
+    .foundmate-pic img{
+        width: 70%;
+        height:90%;
+    }
+
+    .maxw-boxes{
+        flex-direction: column;
+        padding:5rem 1rem ;
+        gap:5rem;
+    }
+
+    
+
+}
+
+@media (max-width:22.5em){
+    .maxw-boxes div{
+        font-size: 1.5rem;
+        width: 25rem;
+    }
+}
+

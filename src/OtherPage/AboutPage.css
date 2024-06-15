@@ -1,0 +1,23 @@
+.container{
+    display:flex;
+}
+
+.maxw{
+    max-width: 120rem;
+
+}
+
+.maxw-about{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.maxw-about img{
+    width:15rem;
+    height: 5rem;
+}

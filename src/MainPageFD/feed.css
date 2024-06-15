@@ -1,24 +1,33 @@
-
-
-.back-color{
-    /* background-color:ghostwhite; */
-    
-    background: url('https://img.freepik.com/premium-vector/vector-seamless-pattern-different-web-icons-set_95169-80.jpg') repeat;
-    margin:2.4rem 0;
-    padding:1.5rem 0;
+.container {
+    display: flex;
 }
 
-.Feed{
-    margin: 2rem auto;
-    height: auto;
-    background-color: rgba(219, 237, 249, 0.9);
-    width: 50%;
-    border-radius: 1%;
-    padding:5% 0%;
+
+/* =======================================================*/
+
+
+.maxw-feed{
+    max-width: 120rem;
+    margin : 0 auto;
 }
+
+.maxw-feed .Feed{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    background-color: lightgray;
+    width: 80rem;
+    align-items: center;
+    padding: 5rem 5rem;
+
+}
+
+/* =======================================================*/
+
 
 .Post-post {
     margin: 3rem auto;
+    font-size: 1.6rem;
     width: 60%;
     border-radius: 10px; /* Updated from 10% to 10px for a more consistent look */
     overflow: hidden;
@@ -55,6 +64,30 @@
     width: 100%;
     margin: 0.5rem 0;
   }
+
+  @media (max-width:35em){
+
+    .maxw-feed .Feed{        
+        width: 30rem;
+        padding: 5rem 1rem;
+    }
+
+    .Post-post{
+        margin: 1rem;
+        width: 80%;
+    }
+
+    .Post-image img{
+        width:100%;
+        height: 15rem;
+        margin: 0.5rem 0;
+    }
+  }
+
+
+
+
+
 
 
 

@@ -5,6 +5,11 @@ import { auth, storage, db } from '../firebase-config'; // Adjust the path accor
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { collection, addDoc } from 'firebase/firestore';
 import './LostItemPage.css'; // Import your CSS file
+import Header from '../Components/Header';
+import Accountbar from './Accountbar';
+import './FoundItemPage.css';
+import { Navigate } from "react-router-dom";
+
 
 const LostItemForm = () => {
   const [email,setEmail] = useState('');
@@ -15,6 +20,9 @@ const LostItemForm = () => {
   const [lostLocation, setLostLocation] = useState('');
   const [reward, setReward] = useState('');
   const [image, setImage] = useState(null);
+
+  const loggedinFlag = localStorage.getItem('FoundMateUserLoggedinFlag');
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -45,9 +53,7 @@ const LostItemForm = () => {
     fetchUserDetails();
   }, []);
 
-  const handleGoBack = (e) => {
-    navigate('/main')
-  }
+  
   const handleImageChange = (e) => {
     if (e.target.files[0]) {
       setImage(e.target.files[0]);
@@ -84,35 +90,43 @@ const LostItemForm = () => {
     navigate('/main');
   };
 
+  if (loggedinFlag !== "yes") {
+    return <Navigate to="/" />;
+  }
+
   return (
     <>
-      <div className="go-back-button">
-          <button type="go-back" onClick={handleGoBack}>Go back</button>
-      </div>
-      <div className="lost-item-form-container">
-        <h2>Enter the details of the item you lost</h2>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Name:
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-          </label>
-          <label>
-            Description:
-            <textarea value={description} onChange={(e) => setDescription(e.target.value)} required />
-          </label>
-          <label>
-            Found Location:
-            <input type="text" value={lostLocation} onChange={(e) => setLostLocation(e.target.value)} required />
-          </label>
-          <label>
-            Upload Image:
-            <input type="file" accept="image/*" onChange={handleImageChange} required />
-          </label>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+      
+      <Header/>
+      <Accountbar/>
+
+      <section  className='container foundform-container'>
+        <div className='maxw-foundform'>
+          <h1>Enter the details of the item you Found</h1>
+          <form onSubmit={handleSubmit}>
+            <label>
+              Name of Found Item:
+              <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+            </label>
+            <label>
+              Description:
+              <textarea value={description} onChange={(e) => setDescription(e.target.value)} required />
+            </label>
+            <label>
+              Found Location:
+              <input type="text" value={lostLocation} onChange={(e) => setLostLocation(e.target.value)} required />
+            </label>
+            <label>
+              Upload Image:
+              <input type="file" accept="image/*" onChange={handleImageChange} required />
+            </label>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
     </>
   );
 };
 
 export default LostItemForm;
+

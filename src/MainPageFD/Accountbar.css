@@ -1,0 +1,23 @@
+.account-navbar{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(232, 242, 248);
+    
+}
+
+.account-nav{
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    font-size: 1.5rem;   
+}
+
+.account-nav img{
+    width: 2rem;
+    height: 2rem;
+}
+.account-nav button{
+    background: none;
+    border: none;
+}

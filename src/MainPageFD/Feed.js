@@ -1,13 +1,20 @@
-import Navbar from "./Navbar";
-import './feed.css'
-import '../index.css';
+
 import React, { useState, useEffect } from 'react';
 import { db } from "../firebase-config";
 import { collection,getDocs } from "firebase/firestore";
 
+import './feed.css'
+import '../index.css';
+import Accountbar from "./Accountbar";
+import Header from "../Components/Header";
+import { Navigate } from "react-router-dom";
+
 function Feed() {
+
+    const loggedinFlag = localStorage.getItem('FoundMateUserLoggedinFlag');
+    
+
     const [data, setData] = useState([]);
-  
     useEffect(() => {
       const fetchData = async () => {
         try {
@@ -21,29 +28,19 @@ function Feed() {
       };
         fetchData();
     }, []); 
-  
-    // checking if data is received
+
+    if (loggedinFlag !== "yes") {
+      return <Navigate to="/" />;
+    }
 
     return (
-      <div>
-        <Navbar />
-        <section className="back-color">
-          <div className="container">
+      <>
+      
+        <Header/>
+        <Accountbar/>
+        <section className="container feed-container">
+          <div className="maxw-feed">
             <div className="Feed">
-              {/* {data.map((objarr) => (
-                <div className="Post-post" key={objarr.id}>
-                  <div className="Post-details">
-                    <h2>{objarr.name}</h2>
-                  </div>
-                  <div className="Post-image">
-                    <img src={objarr.imageUrl} alt={objarr.name} />
-                    <h1>Reward: {objarr.reward}</h1>
-                  </div>
-                  <div className="Post-desc">
-                    <p>{objarr.description}</p>
-                  </div>
-                </div>
-              ))} */}
               {data.map((objarr) => (
               <div
                 className={`Post-post ${objarr.type === 'Found' ? 'found-post' : ''}`}
@@ -54,18 +51,20 @@ function Feed() {
                 </div>
                 <div className="Post-image">
                   <img src={objarr.imageUrl} alt={objarr.name} />
-                  {objarr.type === 'Lost' && <h1>Reward: {objarr.reward}</h1>}
+                  {objarr.type === 'Lost' && <p><b>Reward: {objarr.reward}</b></p>}
                 </div>
                 <div className="Post-desc">
                   <p>{objarr.description}</p>
-                  <p>Contact Details : {objarr.mobile} | {objarr.email} </p>
+                  <p>Location: {objarr.lostLocation}</p>
+                  <p>Contact Details: <br/>{objarr.mobile} | {objarr.email} </p>
                 </div>
               </div>
             ))}
             </div>
           </div>
         </section>
-      </div>
+      
+      </>
     );
   }
   

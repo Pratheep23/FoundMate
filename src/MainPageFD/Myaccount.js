@@ -3,7 +3,6 @@ import { getDocs, query, collection, where } from 'firebase/firestore';
 import { auth } from '../firebase-config';
 import { db } from '../firebase-config';
 import './Myaccount.css';
-import Navbar from "./Navbar";
 import '../index.css';
 
 const Myaccount = () => {
@@ -41,7 +40,7 @@ const Myaccount = () => {
 
   return (
     <>
-      <Navbar />
+
       <section >
         <div className="container">
           <div className="Myaccount">

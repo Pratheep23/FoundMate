@@ -2,43 +2,49 @@
     display: flex;
 }
 
-.foundform-container{
-    margin: 5rem 0rem;
+
+
+/* =======================================================*/
+
+
+
+.creatacc-container{
+    margin-top: 5rem;
+    font-size: 2rem;
 }
 
-
-.maxw-foundform{
+.maxw-createacc{
     padding:5rem 3rem;
     border: 1px solid #ccc;
     border-radius: 5%;
+
     width: 40rem;
-    margin: 0 auto;
-    
-    
-}
-
-.maxw-foundform h1{
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 4rem;
-}
-
-.maxw-foundform form{
     margin : 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap:1rem;
-    align-items: left;
-    font-size: 2rem;
 }
 
-.maxw-foundform form label{
+.createacc-img{
     display: flex;
-    flex-direction: column;
-    
+    justify-content: center;
 }
 
-.maxw-foundform input {
+.maxw-createacc img{
+    width: 20rem;
+    height: auto;
+}
+
+.maxw-createacc{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.maxw-createacc label{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.maxw-createacc input {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -46,16 +52,13 @@
     font-size: 1.6rem;
 }
 
-.maxw-foundform textarea{
-    height: 8rem;
-}
-
-.maxw-foundform input:focus {
+.maxw-createacc input:focus {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.maxw-foundform button {
+
+.maxw-createacc button {
     padding: 10px 20px;
     margin-top: 10px;
     border: none;
@@ -67,10 +70,10 @@
     transition: background-color 0.3s;
 }
 
-.maxw-foundform button:hover {
+.maxw-createacc button:hover {
     background-color: #0056b3;
 }
 
-.maxw-foundform p{
+.maxw-createacc p{
     text-align: center;
 }
