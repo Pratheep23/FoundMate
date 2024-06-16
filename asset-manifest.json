@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FoundMate/static/css/main.198145b5.css",
-    "main.js": "/FoundMate/static/js/main.3ab3803f.js",
+    "main.css": "/FoundMate/static/css/main.95bdb5cb.css",
+    "main.js": "/FoundMate/static/js/main.62a3ce9a.js",
     "static/js/787.c3601210.chunk.js": "/FoundMate/static/js/787.c3601210.chunk.js",
     "index.html": "/FoundMate/index.html",
-    "main.198145b5.css.map": "/FoundMate/static/css/main.198145b5.css.map",
-    "main.3ab3803f.js.map": "/FoundMate/static/js/main.3ab3803f.js.map",
+    "main.95bdb5cb.css.map": "/FoundMate/static/css/main.95bdb5cb.css.map",
+    "main.62a3ce9a.js.map": "/FoundMate/static/js/main.62a3ce9a.js.map",
     "787.c3601210.chunk.js.map": "/FoundMate/static/js/787.c3601210.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.198145b5.css",
-    "static/js/main.3ab3803f.js"
+    "static/css/main.95bdb5cb.css",
+    "static/js/main.62a3ce9a.js"
   ]
 }
