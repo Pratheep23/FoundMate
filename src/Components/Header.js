@@ -14,7 +14,7 @@ export default function Header() {
             <header>
                 <nav className="index-nav">
                     <div className="index-nav-logo">
-                        <NavLink to="/"><img src="/images/foundmate-logo.jpg" alt="found mate img"/></NavLink>
+                        <NavLink to="/"><img src="%PUBLIC_URL%/images/foundmate-logo.jpg" alt="found mate img"/></NavLink>
                     </div>
 
                     <div className="index-nav-links">

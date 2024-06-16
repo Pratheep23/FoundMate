@@ -43,7 +43,7 @@ const LoginPage = () => {
         <div className='maxw-loginform'>
 
           <div className='loginform-img'>
-            <img src='images/foundmate-logo.jpg' alt="FoundMateLogo" />
+            <img src='%PUBLIC_URL%/images/foundmate-logo.jpg' alt="FoundMateLogo" />
           </div>
 
           <label>
