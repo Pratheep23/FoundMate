@@ -15,7 +15,7 @@ export default function IndexPage() {
             <p>FoundMate the perfect platform for getting your lost item</p>
           </div>
           <div className='foundmate-pic'>
-            <img  alt='pic' src="%PUBLIC_URL%/images/indexpic1.png"/>
+            <img  alt='pic' src={ process.env.PUBLIC_URL + "/images/indexpic1.png"}/>
           </div>
         </div>
       </section>

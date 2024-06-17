@@ -54,15 +54,15 @@ export default function CreateAccount() {
 
         
 
-    };
+    }; 
 
     return (
         <>
             <Header/>
             <section className='container creatacc-container'>
                 <div className='maxw-createacc' >
-                    <div className='createacc-img'>
-                        <img src='images/foundmate-logo.jpg' alt="FoundMateLogo" />
+                    <div className='createacc-img'> 
+                        <img src={ process.env.PUBLIC_URL + "/images/foundmate-logo.jpg"} alt="FoundMateLogo" />
                     </div>
                     <label>
                         Username:

@@ -47,17 +47,17 @@ const Myaccount = () => {
             <div className="profile">
               <div className="circularDiv">
 
-              <img src='/images/myaccount/profile-pic.png' alt="profile-img" className="profile-photo" />
+              <img src={ process.env.PUBLIC_URL + '/images/myaccount/profile-pic.png'} alt="profile-img" className="profile-photo" />
 
               </div>
             
               <h2>{userDetails?.name}</h2>
               <br />
               <p>
-                <a href="#"> <img src='/images/socialmedia/whatsapp.png' alt='whatsapplogo' /></a>
-                <a href="#"><img src='/images/socialmedia/instagram.png' alt='instagramlogo' /></a>
-                <a href="#"><img src='/images/socialmedia/twitter.png' alt='twitterlogo' /></a>
-                <a href="#"><img src='/images/socialmedia/facebook.png' alt='facebooklogo' /></a>
+                <a href="#"> <img src={ process.env.PUBLIC_URL + '/images/socialmedia/whatsapp.png'} alt='whatsapplogo' /></a>
+                <a href="#"><img src={ process.env.PUBLIC_URL + '/images/socialmedia/instagram.png'} alt='instagramlogo' /></a>
+                <a href="#"><img src={ process.env.PUBLIC_URL + '/images/socialmedia/twitter.png'} alt='twitterlogo' /></a>
+                <a href="#"><img src={ process.env.PUBLIC_URL + '/images/socialmedia/facebook.png'} alt='facebooklogo' /></a>
               </p>
             </div>
             <div className='profile-desc'>

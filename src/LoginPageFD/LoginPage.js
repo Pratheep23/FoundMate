@@ -42,8 +42,8 @@ const LoginPage = () => {
       <section className='container loginform-container'>
         <div className='maxw-loginform'>
 
-          <div className='loginform-img'>
-            <img src='%PUBLIC_URL%/images/foundmate-logo.jpg' alt="FoundMateLogo" />
+          <div classNa me='loginform-img'>
+            <img src={ process.env.PUBLIC_URL + "/images/foundmate-logo.jpg"} alt="FoundMateLogo" />
           </div>
 
           <label>

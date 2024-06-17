@@ -25,8 +25,8 @@ export default function Accountbar() {
             <ul className='account-nav'>
                 <li><NavLink  to="/main/lost">LOST</NavLink></li>  
                 <li><NavLink  to="/main/found">FOUND</NavLink></li>
-                <li><NavLink  to="/main"><img src="%PUBLIC_URL%/images/myaccount/feed.png" /></NavLink></li>
-                <li><button   onClick={handleLogout}> <img src="%PUBLIC_URL%/images/myaccount/logout.png" /> </button></li>
+                <li><NavLink  to="/main"><img src={ process.env.PUBLIC_URL + "/images/myaccount/feed.png"} /></NavLink></li>
+                <li><button   onClick={handleLogout}> <img src={ process.env.PUBLIC_URL + "/images/myaccount/logout.png"} /> </button></li>
             </ul>
         </nav>
 
